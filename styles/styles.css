@@ -67,11 +67,12 @@ p {
   outline: 1px solid violet;
 }
 /* -----------------footer--------------- */
-/* лінія */
+/*------------- лінія */
 .header-line {
   border-bottom: 1px solid #ececec;
 }
-/*логотип*/
+
+/*---------------логотип*/
 .logo {
   display: block;
   padding: 24px 0;
@@ -90,7 +91,8 @@ p {
   font-size: 26px;
   line-height: 1.19;
 }
-/*навігація по сайту*/
+
+/*----студія/портфоліо/контакти -- стиль тексту*/
 .site-nav,
 .top-contacts {
   display: block;
@@ -108,25 +110,43 @@ p {
 .site-nav:focus {
   color: var(--main-color-decor);
 }
+/* --студія/портфоліо/контакти -- блок */
 .nav {
   display: flex;
   gap: 50px;
-}
+  }
+/* ---- ліва частина -- блок */
 .nav-left {
   display: flex;
   gap: 93px;
 }
+/* --- весь футер -- блок */
 .nav-main {
   display: flex;
   justify-content: space-between;
 }
-/*контакти в шапці*/
+/* ---пошта/телефон -- блок */
+.nav-contact {
+  display: flex;
+  gap:30px;
+  justify-content: center;
+  align-items: center;
+  }
+  /* --- пошта і телефон -- окремі блоки */
 .top-contacts {
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  fill: var(--text-color)
 }
 .top-contacts:focus,
 .top-contacts:hover {
   color: var(--main-color-decor);
+}
+/* --- пошта і телефон іконки -- наслідування */
+.nav-contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 /* --------------------------main-------------------- */
 /* order  */
@@ -225,6 +245,7 @@ p {
   width: 270px;
   height: 120px;
   background-color: #F5F4FA;
+  border-radius: 4%;
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -271,7 +292,6 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  /* background-color: teal; */
   align-items: center;
   justify-content: center;
   fill: var(--icon-svg-color);
@@ -281,7 +301,27 @@ p {
   background-color: var(--main-color-decor);
   fill: var(--basic-white);
 }
-
+.main-client {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.client {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-svg-color);
+  border-radius: 4%;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+  fill: var(--icon-svg-color); 
+}
+.client:hover,
+.client:focus {
+  fill: var(--main-color-decor);
+  border: 1px solid var(--main-color-decor); 
+}
 /*-----------портфоліо оформлення---------------*/
 .examples-button {
   display: flex;
@@ -296,9 +336,12 @@ p {
   border-right: 1px solid #eeeeee;
 }
 .example-project {
-  /* border: 1px solid #eeeeee; */
   width: 370px;
 }
+.example-project:hover,
+.example-project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+} 
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -308,6 +351,7 @@ p {
 .portfolio-title {
   margin-bottom: 4px;
 }
+
 /* ---------------------------кнопки----------- */
 .button {
   color: var(--title-color);
@@ -347,11 +391,41 @@ p {
 footer .logo-studio {
   color: var(--basic-white);
 }
-/* .footer-main {
-  padding: 60px 0;
-} */
+.footer-main {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
 .footer-main a.make-block {
   margin-bottom: 20px;
+}
+/* .footer-soc {
+} */
+.footer-soc-main {
+  display: flex;
+  gap: 10px;
+}
+.footer-soc-title {
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-weight: 700;
+  font-size: 14px;
+line-height: 1.14;
+margin-bottom: 20px;
+}
+.footer-soc-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--basic-white);
+}
+.footer-soc-item:hover,
+.footer-soc-item:focus {
+  background-color: var(--main-color-decor);
 }
 .contacts {
   font-style: normal;
