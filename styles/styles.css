@@ -336,6 +336,7 @@ p {
   border-right: 1px solid #eeeeee;
 }
 .example-project {
+  display: block;
   width: 370px;
 }
 .example-project:hover,
